@@ -1,0 +1,6 @@
+theme: "night"
+transition: "page"
+title: "JSUG2019.9"
+revealjs_config:
+  autoSlide: 0
+  loop: false

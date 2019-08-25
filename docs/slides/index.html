@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta charset="utf-8">
+
+<title>JSUG2019.9</title>
+
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="generator" content="reveal-ck 3.9.2">
+
+
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+<!-- Code syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<link rel="stylesheet" href="css/reveal-ck.css">
+
+
+<!-- Printing and PDF exports -->
+<script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+
+  </head>
+
+  <body>
+    <div class="reveal">
+  <!-- Any section element inside of this container is displayed as a slide -->
+  <div class="slides">
+    <section>
+
+<h3>JSUG 勉強会</h3>
+
+<p><span style="font-size:32px">AWSで作るクラウドネイティブアプリケーションの基本とDevOps</span></p>
+
+<p>2019.9 @KoheiKawabata</p>
+
+</section>
+<section>
+
+<h3>自己紹介</h3>
+<div style="float:right">
+  <img src="images/profile.jpg" width="30%">
+</div>
+<ul>
+  <li>名前：川畑 光平(KAWABATA Kohei)</li>
+  <li>会社：(株)NTTデータ</li>
+  <li>今の仕事：<span style="font-size:32px">プロジェクト支援(主にクラウド系)とR&amp;D</span>
+</li>
+  <li><a href="https://aws.amazon.com/jp/blogs/psa/japan-apn-ambassador-2019/">2019 APN AWS Top Engineers &amp; Ambassadors</a></li>
+  <li>マイナビ「ITSearch+」で記事連載中</li>
+</ul>
+
+</section>
+<section>
+
+<h3>本日のトピックス</h3>
+
+<p><img src="images/cloud-native.jpg" alt="image"><br>
+<img src="images/devops.jpg" alt="image"></p>
+
+</section>
+<section>
+
+<h2>その前に…</h2>
+
+</section>
+<section>
+
+<h3>How to use this slide</h3>
+
+<p><br></p>
+
+<ul>
+  <li>
+<a href="https://github.com/hakimel/reveal.js">「reveal.js」</a>とGitHubPagesで作成</li>
+  <li>黄色の文字はリンク</li>
+  <li>ESCキーを押すとスライドのオーバービュー</li>
+  <li>Altキー + マウスクリックで拡大ズーム</li>
+  <li>J,K,M,Lキーでも遷移(Vimユーザ朗報)</li>
+  <li>幾つかのスライドは下に遷移</li>
+</ul>
+
+</section>
+<section>
+
+<pre><code class="language-java">public class HelloWorld {
+  public static void main(String[] args) {
+      System.out.println("Hello World!");
+  }
+}
+</code></pre>
+
+</section>
+
+  </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+
+<script>
+  (function() {
+  function extend( a, b ) {
+    for(var i in b) {
+      a[i] = b[i];
+    }
+  }
+  var baseOptions = {
+    transition: 'page',
+
+    dependencies: [
+      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+      { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+      { src: 'plugin/zoom-js/zoom.js', async: true },
+      { src: 'plugin/notes/notes.js', async: true }
+    ]
+  };
+
+  
+
+  var configOptions = {"autoSlide":0,"loop":false}
+  var initializeOptions = {};
+  extend(initializeOptions, baseOptions);
+  extend(initializeOptions, configOptions);
+  Reveal.initialize(initializeOptions);
+})();
+
+</script>
+
+  </body>
+</html>

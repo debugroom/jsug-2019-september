@@ -142,7 +142,7 @@
 <ul>
   <div style="font-size:24px">
     <li>AWSで作るクラウドネイティブアプリケーション発展編(仮)で解説予定</li>
-    <li><a href="https://github.com/debugroom/mynavi-sample-aws-s3/tree/master/src/main/java/org/debugroom/mynavi/sample/aws/s3/app/web/helper" target="_blank">今のところ実装のみ作成</a></li>
+    <li><a href="https://github.com/debugroom/mynavi-sample-aws-s3/tree/master/src/main/java/org/debugroom/mynavi/sample/aws/s3/app/web/helper" target="_blank">現在実装のみ公開</a></li>
   </div>
 </ul>
 
@@ -157,7 +157,7 @@
     <li>SQS+SpringCloudAWSを使用したオンライン非同期処理パターン(Producer)</li>
     <li>ディレードバッチやクラウドサービスイベントトリガーパターン</li>
     <li>SQS+SpringCloudAWS+SpringBatch+ECSTaskScheduler(Consumer)</li>
-    <li><a href="https://github.com/debugroom/mynavi-sample-aws-sqs" target="_blank">今のところ実装のみ作成</a></li>
+    <li><a href="https://github.com/debugroom/mynavi-sample-aws-sqs" target="_blank">現在実装のみ公開</a></li>
   </div>
 </ul>
 
@@ -168,31 +168,31 @@
 
 ![image](images/devops.jpg)
 
-<span style="font-size:32px">マイクロサービスアーキテクチャアプリケーションでDevOpsや基盤自動化する際の基本事項をまとめた連載記事</span>
+<span style="font-size:32px">マイクロサービスアーキテクチャ(MSA)アプリケーションでDevOpsや基盤自動化する際の基本事項をまとめた連載記事</span>
 
 
 ---
 
-<span style="font-size:24px">クラウドネイティブ記事のECSコンテナ編の環境でマイクロサービスなアプリケーションを構築した想定</span>
+<span style="font-size:24px">クラウドネイティブECSコンテナ編の環境でMSAアプリケーションを構築</span>
 
-<img src="images/MicroServiceArchitecture.png" width="40%"/>
+<img src="images/MicroServiceArchitecture.png" width="45%"/>
 
 <ul>
   <span style="font-size:24px">
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4379" target="_blank">(1)マイクロサービスアプリケーションのオーバービュー</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4379" target="_blank">(1)MSAアプリケーションのOverview</a></li>
   </span>
 </ul>
 
 ---
 
-#### CI - 静的チェックツール環境の導入編 -
+#### CI - 静的チェックツール環境導入編 -
 
-<img src="images/continuous-integration.jpg" width="60%"/>
+<img src="images/continuous-integration.jpg" width="70%"/>
 
 <ul>
   <span style="font-size:24px">
   <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4463" target="_blank">(2)SonarQubeServerの構築</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4466" target="_blank">(3)静的チェックルールの定義とIDEへの設定</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4466" target="_blank">(3)静的チェックルールの定義とSonarLintのIDEへの設定</a></li>
   </span>
 </ul>
 
@@ -205,18 +205,38 @@
 <ul>
   <span style="font-size:24px">
   <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4475" target="_blank">(4)マイクロサービスにおけるテスト自動化とテスト戦略</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4486" target="_blank">(5)マイクロサービスアプリケーションのパッケージ構成</a></li>
   </span>
 </ul>
 
 ---
 
 <ul>
-  <span style="font-size:24px">
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4486" target="_blank">(5)マイクロサービスアプリケーションのパッケージ構成</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4508" target="_blank">(6)マイクロサービスにおける単体テストコード実装</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4519" target="_blank">(7)マイクロサービスにおける結合テストコード実装</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4547" target="_blank">(8)マイクロサービスを呼び出す側の単体テストコード実装</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4550" target="_blank">(9)マイクロサービスを含むEnd2Endテストコード実装</a></li>
+  <span style="font-size:32px">
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4486" target="_blank">(5〜6)マイクロサービスにおける単体テストコード実装</a>
+    <ul>
+      <li style="margin: 10px 0px 10px">@DataJpaTestアノテーションの利用</li>
+      <li style="margin: 10px 0px 10px">@SpringBootTestアノテーションの利用</li>
+      <li style="margin: 10px 0px 10px">@WebMvcTestアノテーションの利用</li>
+    </ul>
+  </li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4519" target="_blank">(7)マイクロサービスにおける結合テストコード実装</a>
+    <ul>
+      <li style="margin: 10px 0px 10px">DBUnitの利用</li>
+      <li style="margin: 10px 0px 10px">TestRestTemplateの利用</li>
+    </ul>
+  </li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4547" target="_blank">(8)マイクロサービスを呼び出す側の単体テストコード実装</a>
+    <ul>
+      <li style="margin: 10px 0px 10px">MockRestServiceServerの利用</li>
+      <li style="margin: 10px 0px 10px">HTMLUnitの利用</li>
+    </ul>
+  </li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4550" target="_blank">(9)マイクロサービスを含むEnd2Endテストコード実装</a>
+    <ul>
+      <li style="margin: 10px 0px 10px">Seleniumの利用</li>
+    </ul>
+  </li>
   </span>
 </ul>
 
@@ -224,19 +244,25 @@
 
 #### CI - AWS CodeBuildによるCI実践編 -
 
-<img src="images/continuous-integration.jpg" width="60%"/>
+<img src="images/continuous-integration.jpg" width="70%"/>
 
+<ul>
+  <span style="font-size:24px">
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4593" target="_blank">(10)CodeBuildの概要とCodeBuild Localの利用</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4595" target="_blank">(11)CodeBuildの設定</a></li>
+  </span>
+</ul>
 ---
 
 #### CI - AWS CodeBuildによるCI実践編 -
 
-<span style="font-size:24px">ブランチ戦略</span>
+<span style="font-size:32px">GitHubフローをベースにしたブランチ戦略</span>
 
-<img src="images/branch_strategy.png" width="60%"/>
+<img src="images/branch_strategy.png" width="100%"/>
 
 ---
 
-#### CI - AWS CodePipelineによるCD実践編 -
+#### AWS CodePipelineによるCD実践編(今月から)
 
 <img src="images/pipeline.png" width="45%"/>
 
@@ -244,51 +270,73 @@
 
 #### CD - AWS CodePipelineによるパイプライン1 -
 
-<img src="images/pipeline-1.png" width="60%"/>
+<span style="font-size:24px">Backendコンテナイメージの作成・プッシュ</span>
+
+<img src="images/pipeline-1.png" width="70%"/>
 
 ---
 
 #### CD - AWS CodePipelineによるパイプライン2 -
 
-<img src="images/pipeline-2.png" width="60%"/>
+<span style="font-size:24px">ステージング環境へのBackendコンテナデプロイ</span>
+
+<img src="images/pipeline-2.png" width="70%"/>
 
 ---
 
 #### CD - AWS CodePipelineによるパイプライン3 -
 
-<img src="images/pipeline-3.png" width="60%"/>
+<span style="font-size:24px">WebアプリケーションでのE2Eテスト・コンテナイメージ作成</span>
+
+<img src="images/pipeline-3.png" width="70%"/>
 
 ---
 
 #### CD - AWS CodePipelineによるパイプライン4 -
 
-<img src="images/pipeline-4.png" width="60%"/>
+<span style="font-size:24px">Webアプリケーションのコンテナイメージのプッシュ</span>
+
+<img src="images/pipeline-4.png" width="70%"/>
 
 ---
 
 #### CD - AWS CodePipelineによるパイプライン5 -
 
-<img src="images/pipeline-5.png" width="60%"/>
+<span style="font-size:24px">ステージング環境へのWebアプリケーションのコンテナデプロイ</span>
+
+<img src="images/pipeline-5.png" width="70%"/>
 
 ---
 
 #### CD - AWS CodePipelineによるパイプライン6 -
 
-<img src="images/pipeline-6.png" width="60%"/>
+<span style="font-size:24px">ステージング環境でのその他テスト実行・管理者の承認プロセス</span>
+
+<img src="images/pipeline-6.png" width="70%"/>
 
 ---
 
 #### CD - AWS CodePipelineによるパイプライン7 -
 
-<img src="images/pipeline-7.png" width="60%"/>
+<span style="font-size:24px">Backend・Webアプリケーションのコンテナイメージの並行プッシュ</span>
+
+<img src="images/pipeline-7.png" width="70%"/>
 
 ---
 
 #### CD - AWS CodePipelineによるパイプライン8 -
 
-<img src="images/pipeline-8.png" width="60%"/>
+<span style="font-size:24px">プロダクション環境へのBackend・Webアプリケーションのコンテナ並行デプロイ</span>
+
+<img src="images/pipeline-8.png" width="70%"/>
 
 ---
+
+#### 今後の記事公開の予定
+
+- AWS CodeStarの利用
+- AWS CloudFormationを使用した基盤自動化
+
 ***
 
 ### 記事の背景

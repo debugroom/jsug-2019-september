@@ -46,6 +46,64 @@
 - J,K,M,Lキーでも遷移(Vimユーザ朗報)
 - 幾つかのスライドは下に遷移
 
+---
+
+### Agenda
+
+- 背景と記事の使い方
+- 記事のテーマ・トピックス紹介
+  - AWSで作るクラウドネイティブアプリケーションの基本
+  - AWSで実践！基盤・デプロイ自動化
+- 各テーマのポイント
+- 今後の記事公開予定
+
+---
+
+### 記事の背景
+
+<ul>
+  <span style="font-size:24px">
+    <li style="margin: 10px 0px 10px">
+    Springのガイドラインは社内にもあったが、よく使われるAWSサービスの概要や簡単な使い方・設定方法などがドキュメントとして抜け落ちていた。
+    </li>
+    <li style="margin: 10px 0px 10px">
+    ここ最近で支援したAWSプロジェクトでアプリケーション実装、R&D検証した内容を別のプロジェクトでも利用可能なよう汎用化
+    </li>
+    <li style="margin: 10px 0px 10px">
+    幾つかのテーマに関して、AWSパートナーソリューションアーキテクトとも議論、内容を全社向けにフィードバック
+    </li>
+    <li style="margin: 10px 0px 10px">
+    どうせなら社外に公開(→マイナビへ)
+    </li>
+  </span>
+</ul>
+
+---
+
+### 記事の使い方
+
+<ul>
+  <span style="font-size:20px">
+    <li style="margin: 15px 0px 15px">
+    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを学びたい。とはいえ、最低以下のような経験は必要。
+      <ul>
+        <li>Java・SpringFrameworkを使ったことがある経験者</li>
+        <li>Unix・LinuxなどのPOSIX系OS、Dockerコンテナを使ったことがある経験者</li>
+        <li>MavenやGitといった開発ツールを使ったことがある経験者</li>
+      </ul>
+    </li>
+    <li style="margin: 15px 0px 15px">
+    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい
+    </li>
+    <li style="margin: 15px 0px 15px">
+    クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい
+    </li>
+    <li style="margin: 15px 0px 15px">
+    各テーマを一部切り取って、構築・実装の参考にしたい
+    </li>
+  </span>
+</ul>
+
 ***
 
 ### Article Topics
@@ -252,6 +310,7 @@
   <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4595" target="_blank">(11)CodeBuildの設定</a></li>
   </span>
 </ul>
+
 ---
 
 #### CI - AWS CodeBuildによるCI実践編 -
@@ -339,13 +398,98 @@
 
 ***
 
-### 記事の背景
+### 各テーマのポイント
 
-- ここ最近で支援したAWSプロジェクトで実装、R&D検証した内容を汎用化
-- 幾つかのテーマにAWSソリューションアーキテクトとも議論
+![image](images/cloud-native.jpg)
+
+***
+
+#### サーバレス編
+
+![image](images/serverless.png)
 
 ---
-### 各テーマのポイント
+
+### どうなの？サーバーレス
+
+[良いところ]
+<ul>
+  <span style="font-size:24px">
+    <li style="margin: 10px 0px 10px">
+    画像加工やエンコードなどとにかくマシンリソースを使う処理の場合、パフォーマンス影響を気にしなくて良い。
+    </li>
+    <li style="margin: 10px 0px 10px">
+    S3ファイルアップロードなどのイベント後続処理といった形で、AWSクラウドサービスの連携が楽。
+    </li>
+    <li style="margin: 10px 0px 10px">
+    SQSキュー、SNSへの連携、DynamoDBやRDSへのアクセスなどの実装はSpring Cloud Function + Spring Cloud AWS + Spring Data XXXと組み合わせればかなりスッキリかける。
+    </li>
+  </span>
+</ul>
+
+[イマイチ]
+
+<ul>
+  <span style="font-size:24px">
+    <li style="margin: 10px 0px 10px">
+    エラー発生時の例外ハンドリング(ユーザへの通知やシステムメッセージどうするか)がいつも課題。デッドレターキューに投げつけるなど雑な対応しかできないのでは。
+    </li>
+    <li style="margin: 10px 0px 10px">
+    デバッグやテストが大変。ServerlessFramework導入するしか手はないのか。
+    </li>
+  </span>
+</ul>
+
+***
+
+***
+
+#### ECSコンテナ編
+
+<img src="images/ecs-architecture.png" width="65%"/>
+
+---
+
+#### なぜこの構成にしたの？
+
+<span style="font-size:24px">A. 下記の案もありました。</span>
+
+<img src="images/ecs-architecture-2.png" width="80%"/>
+
+---
+
+<span style="font-size:24px"> が、下記の理由によりやめました。</span>
+
+<img src="images/ecs-architecture-ng-point.png" width="80%"/>
+
+---
+
+<span style="font-size:24px"> 結局、この形で記事を書くことにしました。ただし、唯一の正解とは限りません。</span>
+
+<img src="images/ecs-architecture-description.png" width="70%"/>
+
+---
+
+#### その他ツッコミ
+
+<ul>
+  <span style="font-size:24px">
+    <li style="margin: 10px 0px 10px">
+    Q. アプリケーションロードバランサーじゃなくて、Route53のServiceDiscoveryやAppMesh何故使わないの？
+    </li>
+    <li style="margin: 10px 0px 20px">
+    A. ALBだとパスベースルーティング [http://service.com/xxxxxのxxxx] でコンテナごとにリクエストを振り分けられるのでALBにしてます。AppMeshは最近出てきたサービスなのでまだ試してません。将来的に検証する予定です。サービスの切り出し単位によっても異なりますし、将来的な意味でも、唯一の正解ではないと思います。
+    </li>
+    <li style="margin: 20px 0px 10px">
+    Q. EKS(Elastic Kubernetes Service)は使わないのですか？
+    </li>
+    <li style="margin: 10px 0px 10px">
+    A. EKSが東京リージョンにリリースする前に検討していたので、いったん見送りました。それにECSが想定していた以上にオーケストレーションとして優秀だったこと(ALBとECSコンテナ間のポートマッピングやセキュリティ制御など不足が感じられなかったこと)や後述するCodeBuild、CodePipelineとのCI、CD連携は現在もEKSよりECSの方が一日の長があります。ただし、Kubernetesの使用はベンダロックインの観点から採用頻度が高いので今後検証する予定です。
+    </li>
+  </span>
+</ul>
+
+***
 
 ---
 

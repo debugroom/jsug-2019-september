@@ -48,7 +48,7 @@
 
 ***
 
-### 記事の内容
+### Article Topics
 
 
 ![image](images/cloud-native.jpg)
@@ -109,7 +109,7 @@
 
 <ul>
   <div style="font-size:32px">
-  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4447" target="_blank">(14)NoSQL基礎解説(CAP定理による分類)</a></li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4473" target="_blank">(14)NoSQL基礎解説(CAP定理による分類)</a></li>
   <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4479" target="_blank">(15)NoSQL基礎解説(AP型データベースの特徴)</a></li>
   <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4498" target="_blank">(16)AmazonDynamoDBの構築</a></li>
   <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4506" target="_blank">(17〜18)Spring Data DynamoDBを使った実装</a></li>
@@ -164,7 +164,7 @@
 
 ***
 ***
-### 記事の内容
+### Article Topics
 
 ![image](images/devops.jpg)
 
@@ -175,11 +175,11 @@
 
 <span style="font-size:24px">クラウドネイティブ記事のECSコンテナ編の環境でマイクロサービスなアプリケーションを構築した想定</span>
 
-<img src="images/MicroserviceArchitecture.png" width="40%"/>
+<img src="images/MicroServiceArchitecture.png" width="40%"/>
 
 <ul>
   <span style="font-size:24px">
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4379" target="_blank">(1)マイクロサービスオーバービュー</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4379" target="_blank">(1)マイクロサービスアプリケーションのオーバービュー</a></li>
   </span>
 </ul>
 
@@ -191,10 +191,102 @@
 
 <ul>
   <span style="font-size:24px">
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4463" target="_blank">(1)SonarQubeServerの構築</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4466" target="_blank">(2)静的チェックルールの定義とIDEへの設定</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4463" target="_blank">(2)SonarQubeServerの構築</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4466" target="_blank">(3)静的チェックルールの定義とIDEへの設定</a></li>
   </span>
 </ul>
+
+---
+
+#### CI - SpringBootテストコード実装編 -
+
+<img src="images/microservice-test-scope.png" width="60%"/>
+
+<ul>
+  <span style="font-size:24px">
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4475" target="_blank">(4)マイクロサービスにおけるテスト自動化とテスト戦略</a></li>
+  </span>
+</ul>
+
+---
+
+<ul>
+  <span style="font-size:24px">
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4486" target="_blank">(5)マイクロサービスアプリケーションのパッケージ構成</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4508" target="_blank">(6)マイクロサービスにおける単体テストコード実装</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4519" target="_blank">(7)マイクロサービスにおける結合テストコード実装</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4547" target="_blank">(8)マイクロサービスを呼び出す側の単体テストコード実装</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4550" target="_blank">(9)マイクロサービスを含むEnd2Endテストコード実装</a></li>
+  </span>
+</ul>
+
+---
+
+#### CI - AWS CodeBuildによるCI実践編 -
+
+<img src="images/continuous-integration.jpg" width="60%"/>
+
+---
+
+#### CI - AWS CodeBuildによるCI実践編 -
+
+<span style="font-size:24px">ブランチ戦略</span>
+
+<img src="images/branch_strategy.png" width="60%"/>
+
+---
+
+#### CI - AWS CodePipelineによるCD実践編 -
+
+<img src="images/pipeline.png" width="45%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン1 -
+
+<img src="images/pipeline-1.png" width="60%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン2 -
+
+<img src="images/pipeline-2.png" width="60%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン3 -
+
+<img src="images/pipeline-3.png" width="60%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン4 -
+
+<img src="images/pipeline-4.png" width="60%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン5 -
+
+<img src="images/pipeline-5.png" width="60%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン6 -
+
+<img src="images/pipeline-6.png" width="60%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン7 -
+
+<img src="images/pipeline-7.png" width="60%"/>
+
+---
+
+#### CD - AWS CodePipelineによるパイプライン8 -
+
+<img src="images/pipeline-8.png" width="60%"/>
 
 ---
 ***
@@ -203,6 +295,9 @@
 
 - ここ最近で支援したAWSプロジェクトで実装、R&D検証した内容を汎用化
 - 幾つかのテーマにAWSソリューションアーキテクトとも議論
+
+---
+### 各テーマのポイント
 
 ---
 

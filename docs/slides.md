@@ -39,18 +39,21 @@
 
 <br />
 
-- [「reveal.js」](https://github.com/hakimel/reveal.js){:target="_blank"}を使って、GitHub Pages上に作成
-- 黄色の文字はリンク
-- ESCキーを押すとスライドのオーバービュー
+- ___黄色の文字はリンク___
+- ___ESCキーを押すとスライドのオーバービュー___
 - Altキー + マウスクリックで拡大ズーム
-- J,K,M,Lキーでも遷移(Vimユーザ朗報)
-- 幾つかのスライドは下に遷移
+- J,K,M,Lキーでも遷移
+- ___幾つかのスライドは下に遷移___
+
+<span style="font-size:20px">
+※当スライドは <a href="https://github.com/hakimel/reveal.js" target="_blank">「reveal.js」</a> を使って、GitHub Pages上に作成
+</span>
 
 ---
 
 ### Agenda
 
-- 背景と記事の使い方
+- Backgroundと対象読者
 - 記事のテーマ・トピックス紹介
   - AWSで作るクラウドネイティブアプリケーションの基本
   - AWSで実践！基盤・デプロイ自動化
@@ -59,12 +62,12 @@
 
 ---
 
-### 記事の背景
+#### Background
 
 <ul>
   <span style="font-size:24px">
     <li style="margin: 10px 0px 10px">
-    Springのガイドラインは社内にもあったが、よく使われるAWSサービスの概要や簡単な使い方・設定方法などがドキュメントとして抜け落ちていた。
+    Springのガイドラインは社内にもあったが、よく使われるAWSサービスの概要や使い方・設定方法などがドキュメントとして抜け落ちていた。
     </li>
     <li style="margin: 10px 0px 10px">
     ここ最近で支援したAWSプロジェクトでアプリケーション実装、R&D検証した内容を別のプロジェクトでも利用可能なよう汎用化
@@ -73,19 +76,19 @@
     幾つかのテーマに関して、AWSパートナーソリューションアーキテクトとも議論、内容を全社向けにフィードバック
     </li>
     <li style="margin: 10px 0px 10px">
-    どうせなら社外に公開(→マイナビへ)
+    どうせなら社外に公開(マイナビへWeb記事として寄稿)
     </li>
   </span>
 </ul>
 
 ---
 
-### 記事の使い方
+#### 記事の対象読者
 
 <ul>
   <span style="font-size:20px">
     <li style="margin: 15px 0px 15px">
-    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを学びたい。とはいえ、最低以下のような経験は必要。
+    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを知りたい。とはいえ、最低以下のような経験は必要。
       <ul>
         <li>Java・SpringFrameworkを使ったことがある経験者</li>
         <li>Unix・LinuxなどのPOSIX系OS、Dockerコンテナを使ったことがある経験者</li>
@@ -93,13 +96,13 @@
       </ul>
     </li>
     <li style="margin: 15px 0px 15px">
-    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい
+    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい。
     </li>
     <li style="margin: 15px 0px 15px">
-    クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい
+    クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい。
     </li>
     <li style="margin: 15px 0px 15px">
-    各テーマを一部切り取って、構築・実装の参考にしたい
+    各テーマを一部切り取って、構築・実装の参考にしたい。
     </li>
   </span>
 </ul>
@@ -410,9 +413,11 @@
 
 ---
 
-### どうなの？サーバーレス
+#### [補足]どうなの？サーバーレス
 
-[良いところ]
+<div style="text-align:left">
+
+<span style="font-size:24px">[利点]</span>
 <ul>
   <span style="font-size:24px">
     <li style="margin: 10px 0px 10px">
@@ -421,24 +426,25 @@
     <li style="margin: 10px 0px 10px">
     S3ファイルアップロードなどのイベント後続処理といった形で、AWSクラウドサービスの連携が楽。
     </li>
-    <li style="margin: 10px 0px 10px">
-    SQSキュー、SNSへの連携、DynamoDBやRDSへのアクセスなどの実装はSpring Cloud Function + Spring Cloud AWS + Spring Data XXXと組み合わせればかなりスッキリかける。
-    </li>
   </span>
 </ul>
 
-[イマイチ]
-
+<span style="font-size:24px">[イマイチ]</span>
 <ul>
   <span style="font-size:24px">
     <li style="margin: 10px 0px 10px">
-    エラー発生時の例外ハンドリング(ユーザへの通知やシステムメッセージどうするか)がいつも課題。デッドレターキューに投げつけるなど雑な対応しかできないのでは。
+    SQSキュー、SNSへの連携、DynamoDBやRDSへのアクセスなどの実装はボイラープレートコードが乱立しがち。Spring Cloud Function + Spring Cloud AWS + Spring Data XXXと組み合わせればかなりスッキリかける。
+    </li>
+    <li style="margin: 10px 0px 10px">
+    エラー発生時の例外ハンドリング(ユーザへの通知やシステムメッセージどうするか)がいつも課題。同期的なハンドリングは難しく、デッドレターキューに投げつけるなど雑な対応しかできないのでは。
     </li>
     <li style="margin: 10px 0px 10px">
     デバッグやテストが大変。ServerlessFramework導入するしか手はないのか。
     </li>
   </span>
 </ul>
+
+</div>
 
 ***
 
@@ -450,7 +456,7 @@
 
 ---
 
-#### なぜこの構成にしたの？
+#### [補足]なぜこの構成にしたの？
 
 <span style="font-size:24px">A. 下記の案もありました。</span>
 
@@ -464,34 +470,214 @@
 
 ---
 
-<span style="font-size:24px"> 結局、この形で記事を書くことにしました。ただし、唯一の正解とは限りません。</span>
+<span style="font-size:22px"> 結局、この形にしました。しかし、この構成が唯一の正解というわけではありません。</span>
 
 <img src="images/ecs-architecture-description.png" width="70%"/>
 
 ---
 
-#### その他ツッコミ
+<span style="font-size:22px"> ただし、以下のようなメリットを得ることはできます。</span>
 
-<ul>
-  <span style="font-size:24px">
-    <li style="margin: 10px 0px 10px">
-    Q. アプリケーションロードバランサーじゃなくて、Route53のServiceDiscoveryやAppMesh何故使わないの？
-    </li>
-    <li style="margin: 10px 0px 20px">
-    A. ALBだとパスベースルーティング [http://service.com/xxxxxのxxxx] でコンテナごとにリクエストを振り分けられるのでALBにしてます。AppMeshは最近出てきたサービスなのでまだ試してません。将来的に検証する予定です。サービスの切り出し単位によっても異なりますし、将来的な意味でも、唯一の正解ではないと思います。
-    </li>
-    <li style="margin: 20px 0px 10px">
-    Q. EKS(Elastic Kubernetes Service)は使わないのですか？
-    </li>
-    <li style="margin: 10px 0px 10px">
-    A. EKSが東京リージョンにリリースする前に検討していたので、いったん見送りました。それにECSが想定していた以上にオーケストレーションとして優秀だったこと(ALBとECSコンテナ間のポートマッピングやセキュリティ制御など不足が感じられなかったこと)や後述するCodeBuild、CodePipelineとのCI、CD連携は現在もEKSよりECSの方が一日の長があります。ただし、Kubernetesの使用はベンダロックインの観点から採用頻度が高いので今後検証する予定です。
-    </li>
-  </span>
-</ul>
+<img src="images/ecs-architecture-merit.png" width="70%"/>
+
+---
+
+#### [補足]その他ツッコミ
+
+<div style="text-align:left">
+<span style="font-size:24px">
+Q.　アプリケーションロードバランサーじゃなくて、Route53のServiceDiscoveryやAppMesh使わないの？
+</span>
+
+<br />
+<br />
+
+<span style="font-size:24px">
+A.　ALBだとパスベースルーティング [http://service.com/xxxxxのxxxx] でコンテナごとにリクエストを振り分けられるのでALBにしてます。
+AppMeshは最近出てきたサービスなのでまだ試してません。将来的に検証する予定です。
+サービスの切り出し単位によっても異なりますし、将来的な意味でも、現在の構成が唯一の正解ではないと思います。
+</span>
+</div>
+
+---
+
+#### [補足]その他ツッコミ
+
+<div style="text-align:left">
+
+<span style="font-size:24px">
+Q.　EKS(Elastic Kubernetes Service)は使わないの？
+</span>
+
+<br />
+<br />
+
+<span style="font-size:24px">
+A.　EKSが東京リージョンにリリースする前に検討していたので、いったん見送りました。それにECSが想定していた以上にオーケストレーションとして優秀だったこと(ALBとECSコンテナ間のポートマッピングやセキュリティ制御、Dockerコンテナの再利用性など不足が感じられなかったこと)や、また、後述するCodeBuild、CodePipelineとのCI、CD連携は現在もEKSよりECSの方が一日の長があります。ただし、Kubernetesの使用はベンダロックインの観点から採用頻度が高いので今後検証する予定です。
+</span>
+
+</div>
+
+***
+***
+
+#### RDS編
+
+<img src="images/rds_setting_overview.png" width="80%"/>
+
+---
+
+#### [補足]Spring Cloud AWS必要？
+
+<div style="text-align:left">
+<span style="font-size:24px">
+Q.　従来通りDB接続設定すればいいのでは？
+</span>
+
+<br />
+
+<span style="font-size:24px">
+A.　設定が簡潔にかけるのがメリットかと思います。
+</span>
+
+<br />
+<span style="font-size:18px">設定クラス</span>
+</div>
+
+```java
+@Configuration
+@EnableRdsInstance(
+        dbInstanceIdentifier = "${rds.identifier}",
+        password ="${rds.password}",
+        readReplicaSupport = false)
+public class RdsConfig {
+}
+```
+
+<div style="text-align:left">
+<span style="font-size:18px">application.yml</span>
+</div>
+
+```yml
+rds:
+  identifier: ${RDS_IDENTIFIER}
+  password: ${RDS_PASSWORD}
+```
 
 ***
 
+***
+
+#### NoSQL編
+
+<img src="images/database-cap-category.png" width="80%"/>
+
 ---
+
+<span style="font-size:32px">[ポイント]各データベースに適したユースケースやデータ特性</span>
+
+<br/>
+
+<div style="font-size:18px">
+<table style="padding:10px 0 10px">
+  <thead>
+    <tr>
+      <th><span style="font-size:22px">タイプ</span></th>
+      <th><span style="font-size:22px">ユースケース/データ特性</span></th>
+      <th><span style="font-size:22px">使いどころ</span></th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+      <td style="padding:10px 4px 10px" rowspan="3">CA型</td>
+      <td style="padding:10px 4px 10px">複雑な条件</td>
+      <td style="padding:10px 4px 10px">集合関数や射影/結合/副問い合わせ等</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 4px 10px">厳密なトランザクション/整合性</td>
+      <td style="padding:10px 4px 10px">多額の決済データ、人命に関わるようなデータ</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 4px 10px">高負荷アップデート</td>
+      <td style="padding:10px 4px 10px">正規化を前提としたデータモデル</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 4px 10px" rowspan="2">CP型</td>
+      <td style="padding:10px 4px 10px">キャッシュ</td>
+      <td style="padding:10px 4px 10px">一部が利用できなくても大きな問題はない</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 4px 10px">高速バッチ処理</td>
+      <td style="padding:10px 4px 10px">シャーディングによる高速処理</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 4px 10px" rowspan="3">AP型</td>
+      <td style="padding:10px 4px 10px">スケーラブルアプリケーション</td>
+      <td style="padding:10px 4px 10px">ノードの追加を動的に行いたい</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 4px 10px">マルチリージョン</td>
+      <td style="padding:10px 4px 10px">グローバルなデータセンタ間のデータ共有</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 4px 10px;border-bottom:1px white solid">大量の書き込み</td>
+      <td style="padding:10px 4px 10px;border-bottom:1px white solid">単一障害点がないため、IoTセンサーデータなど大量書き込み</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+---
+
+#### クラウドネイティブなAP型データベース
+
+<img src="images/ap-database.png" width="80%"/>
+
+---
+
+<div style="text-align:left">
+<span style="font-size:24px">
+[補足]<a href="https://github.com/debugroom/mynavi-sample-spring-data-dynamodb" target="_blank">Spring Data DynamoDBのサンプル</a>や
+<a href="https://github.com/debugroom/mynavi-sample-spring-data-cassandra" target="_blank">Spring Data Cassadraを使ったサンプル</a>実装は紹介しているが、AP型データモデルはどう設計すればよいか？
+</span>
+
+<br />
+<br />
+
+<ul>
+  <span style="font-size:18px">
+  <li>AWSで作るクラウドネイティブアプリケーション(発展編)で解説予定</li>
+  <li style="margin: 10px 0px 10px">ただ、当面先になるのでポイントだけ列挙
+    <ul>
+      <li style="margin: 10px 0px 10px">1:1や1:Nのような関係のデータモデルだとRDBと同じような形でもそんなに問題はない</li>
+      <li style="margin: 10px 0px 10px">ただし、キー以外の検索ができないので、それ以外の項目で検索をかける場合はインデックスを作っておく</li>
+      <li style="margin: 10px 0px 10px">N:Nの関連になるようなデータモデルはRDBと同じように関連実体(学生エンティティと講義エンティティの間にある受講のような実体でキーだけのインデックステーブル)を作っておくとうまくいくケースも多い</li>
+      <li style="margin: 10px 0px 10px">テーブルのJOINは当然できないので、アプリ側でデータを取ってきてから加工する手法を使う</li>
+      <li style="margin: 10px 0px 10px">設計の最初はまずデータアクセスのユースケースを洗い出すこと。</li>
+      <li style="margin: 10px 0px 10px">参照は検索キーを注意していれば良いが、非正規化されたデータだと更新処理がしんどい(現実的でない)場合があるので、従来通りRDBを使うことも検討する</li>
+      <li style="margin: 10px 0px 10px">大量書き込み時はプライマリキーにUUIDや乱数などで書き込むノードを分散させる。</li>
+      <li style="margin: 10px 0px 10px">ホットデータとコールドデータでテーブルを分けること</li>
+    </ul>
+  </li>
+  </span>
+</ul>
+
+<span style="font-size:16px">※余談 : AP型データストアのトラブルシューティングはかなりしんどい。サポートやマネージドに任せた方が断然楽。</span>
+
+</div>
+
+---
+
+#### CP型のElastiCache(Redis)
+
+<img src="images/architecture-elasticache.png" width="40%"/>
+
+---
+
+---
+
+
+***
 
 ```java
 public class HelloWorld {
@@ -500,5 +686,6 @@ public class HelloWorld {
   }
 }
 ```
+
 
 ---

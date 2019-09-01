@@ -1,4 +1,4 @@
-### JSUG 勉強会
+### :seedling: JSUG 勉強会 :seedling:
 
 
 <span style="font-size:28px">AWSで作るクラウドネイティブアプリケーションの基本とDevOps</span>
@@ -6,17 +6,21 @@
 
 2019.9 @KoheiKawabata
 
----
+***
 
 ### 自己紹介
 
 <p><img src="images/profile.jpg" style="float:left" width="40%"></p>
-<div style="margin: 100px 0px auto">
+<div style="margin: 50px 0px auto">
 <ul>
   <div style="font-size:20px; margin:auto">
   <li style="margin: 10px 0px 10px">名前：川畑 光平(KAWABATA Kohei)</li>
   <li style="margin: 10px 0px 10px">会社：(株)NTTデータ</li>
   <li style="margin: 10px 0px 10px">今の仕事：プロジェクト支援(主にクラウド系)とR&amp;D</li>
+  <li style="margin: 10px 0px 10px">長崎県出身</li>
+  <li style="margin: 10px 0px 10px">趣味：AP実装、料理、水泳、スノボ</li>
+  <li style="margin: 10px 0px 10px">学生の頃Appleでバイトしてました(iPodが流行った頃)</li>
+  <li style="margin: 10px 0px 10px">2019.2月に長男が誕生</li>
   <li style="margin: 10px 0px 10px"><a href="https://aws.amazon.com/jp/blogs/psa/japan-apn-ambassador-2019/" target="_blank">2019 APN AWS Top Engineers &amp; Ambassadors</a></li>
   <li style="margin: 10px 0px 10px">マイナビ「ITSearch+」で記事連載中</li>
   </div>
@@ -24,6 +28,23 @@
 </div>
 
 ---
+
+<p><img src="images/father-child.jpg" style="float:left" width="50%"></p>
+
+<div style="margin: 100px 0px auto">
+<br/>
+<br/>
+←私
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+←長男
+</div>
+
+
+***
 
 ### 本日のトピックス
 
@@ -37,7 +58,7 @@
 
 ---
 
-### How to use this slide
+### :wrench: How to use this slide
 
 <br />
 
@@ -46,6 +67,7 @@
 - Altキー + マウスクリックで拡大ズーム
 - J,K,M,Lキーでも遷移
 - ___幾つかのスライドは下に遷移___
+- "shift + ?"でショートカットキー一覧
 
 <span style="font-size:20px">
 ※当スライドは <a href="https://github.com/hakimel/reveal.js" target="_blank">「reveal.js」</a> を使って、GitHub Pages上に作成
@@ -57,8 +79,8 @@
 
 - Backgroundと対象読者
 - 記事オーバービュー
-  - クラウドネイティブアプリケーション
-  - DevOps
+  - :cloud:クラウドネイティブアプリケーション
+  - :octocat:DevOps
 - 各テーマのポイント・補足
 - 今後の記事公開予定
 
@@ -78,19 +100,19 @@
     幾つかのテーマに関して、AWSパートナーソリューションアーキテクトとも議論、内容を全社向けにフィードバック
     </li>
     <li style="margin: 10px 0px 10px">
-    どうせなら社外に公開(マイナビへWeb記事として寄稿)※記事としてはまとめることができたが、色々数えきれないトラブルシューティングがあって苦労したので、そういった情報は共有して、できる限り、同業エンジニアの労力を軽減したい想い。
+    どうせなら社外に公開(マイナビへWeb記事として寄稿)※ドキュメントとしてはまとめることができたが、色々数えきれないトラブルシューティングがあって苦労したので、そういった情報は共有して、できる限り、同業エンジニアの労力を軽減したい想い。
     </li>
   </span>
 </ul>
 
 ---
 
-#### 記事の対象読者
+#### :raising_hand: 記事の対象読者
 
 <ul>
   <span style="font-size:20px">
     <li style="margin: 15px 0px 15px">
-    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを知りたい。とはいえ、最低以下のような経験は必要。
+    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを知りたい方。とはいえ、最低以下のような経験は必要。
       <ul>
         <li>Java・SpringFrameworkを使ったことがある経験者</li>
         <li>Unix・LinuxなどのPOSIX系OS、Dockerコンテナを使ったことがある経験者</li>
@@ -98,25 +120,25 @@
       </ul>
     </li>
     <li style="margin: 15px 0px 15px">
-    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい。
+    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい方。
     </li>
     <li style="margin: 15px 0px 15px">
-    クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい。
+    クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい方。
     </li>
     <li style="margin: 15px 0px 15px">
-    各テーマを一部切り取って、構築・実装の参考にしたい。
+    各テーマを一部切り取って、構築・実装の参考にしたい方。
     </li>
   </span>
 </ul>
 
 ***
 
-### Article Overview
+### :cloud: Article Overview
 
 
 ![image](images/cloud-native.jpg)
 
-<span style="font-size:32px">AWSクラウドでよく利用される基本的なサービスの構築方法や、SpringBootをベースとしたアプリケーションを実装する際の基本事項をまとめた連載記事</span>
+<span style="font-size:32px">AWSクラウドでよく利用される基本的なサービスの構築方法や、SpringBootをベースとしてクラウド特有の特徴を生かしたアプリケーションを実装する際の基本事項をまとめた連載記事</span>
 
 ---
 
@@ -179,7 +201,8 @@
 
 #### NoSQL編
 
-<img src="images/architecture-dynamodb.png" width="60%"/>
+<img src="images/architecture-dynamodb.png" style="float:left" width="45%"/>
+<img src="images/ap-database.png" style="margin: 0 0 5px" width="45%"/>
 
 <ul>
   <div style="font-size:24px">
@@ -237,7 +260,7 @@
 
 ***
 ***
-### Article Overview
+### :octocat: Article Overview
 
 ![image](images/devops.jpg)
 
@@ -404,16 +427,9 @@
 
 <img src="images/pipeline-8.png" width="70%"/>
 
----
-
-#### 今後の記事公開の予定
-
-- AWS CodeStarの利用
-- AWS CloudFormationを使用した基盤自動化
-
 ***
 
-### 各テーマのポイント・補足
+### :memo:各テーマのポイント・補足
 
 ![image](images/cloud-native.jpg)
 
@@ -548,8 +564,8 @@ Q.　従来通りDB接続設定すればいいのでは？
 
 <br />
 
-<span style="font-size:24px">
-A.　設定が簡潔にかけるのがメリットかと思います。
+<span style="font-size:20px">
+A.　設定が簡潔なのがメリット。環境変数はSystemsManagerから取得し、セキュリティも向上。
 </span>
 
 <br />
@@ -971,7 +987,7 @@ public class MessageListener {
 
 ***
 
-### 各テーマのポイント・補足
+### :memo:各テーマのポイント・補足
 
 ![image](images/devops.jpg)
 
@@ -987,7 +1003,7 @@ public class MessageListener {
 
 <div style="text-align:left">
 <span style="font-size:24px">
-[補足]マイクロサービスとは言っているが、記事中では、どのようにサービスを分割するか、プロジェクトやアプリケーションコンポーネントの構成など事例は出したが、ベストプラクティスまで踏み込んだ議論はしていない
+[補足]マイクロサービスとは言っているが、記事中では、プロジェクトやアプリケーションコンポーネントの構成など事例は出したが、どのようにサービスを分割するかベストプラクティスまで踏み込んだ議論はしていない
 </span>
 
 <br />
@@ -1018,33 +1034,128 @@ public class MessageListener {
 
 #### CI - 静的チェックツール環境導入編 -
 
-<img src="images/continuous-integration.jpg" width="90%"/>
+<img src="images/continuous-integration.jpg" width="60%"/>
 
----
 <span style="font-size:24px">
 [ポイント]SonarQubeServerをALB+ECS+RDSで構成のメリット
 </span>
 
 <ul>
-  <li style="font-size:24px">ALB+ECSコンテナの運用で可用性を向上</li>
+  <li style="font-size:24px">SonarQubeServerをALB+ECSコンテナの運用で可用性を向上</li>
   <li style="font-size:24px">データベースをRDSにすることにより、バックアップ等保全性が向上　</li>
 </ul>
 
 ---
 
-<span style="font-size:24px"><a href="https://sonar.spring.io/projects?sort=-size" target="_blank">Spring.ioプロジェクトのSonarqubeプロジェクト</a>はどうなっているか？</span>
+<span style="font-size:24px"><a href="https://sonar.spring.io/projects?sort=-size" target="_blank">[補足]Spring.ioプロジェクトのSonarqubeプロジェクト</a>はどうなっているか？</span>
 
 <img src="images/sonarqube-spring-project.png" width="80%"/>
 
 ***
+***
 
-```java
-public class HelloWorld {
-  public static void main(String[] args) {
-      System.out.println("Hello World!");
-  }
-}
-```
+#### CI - SpringBootテストコード実装編 -
+
+<img src="images/microservice-test-scope.png" width="60%"/>
 
 
 ---
+
+:memo:「テスト自動化の８原則」
+
+<div style="font-size:30px; text-align:left; margin:10px 0 10px">
+
+1. 手動テストはなくならない <br/>
+2. 手動でおこなって効果のないテストを自動化しても無駄である <br/>
+3. 自動テストは書いたことしかテストしない <br/>
+4. テスト自動化の効用はコスト削減だけではない <br/>
+5. 自動テストシステムの開発は継続的におこなうものである <br/>
+6. 自動化検討はプロジェクト初期から <br/>
+7. 自動テストで新種のバグが見つかることは稀である <br/>
+8. テスト結果分析という新たなタスクが生まれる <br/>
+
+</div>
+
+
+<span style="font-size:18px">出典：<a href="https://sites.google.com/site/testautomationresearch/test_automation_principle" target="_blank">テスト自動化研究会 「テスト自動化の８原則」</a>より</span>
+
+***
+***
+
+#### CI - AWS CodeBuildによるCI実践編 -
+
+<img src="images/continuous-integration.jpg" width="60%"/>
+
+<span style="font-size:24px">
+[ポイント]クラウド型CIツールのメリット
+</span>
+
+<ul>
+  <li style="font-size:24px">複数並走開発していても、マシンリソースを気にせずテスト</li>
+  <li style="font-size:24px">マスター・スレーブなど構成を気にせずシンプルにできる</li>
+</ul>
+
+***
+***
+
+#### AWS CodePipelineによるCD実践編
+
+<img src="images/pipeline.png" width="45%"/>
+
+---
+
+<span style="font-size:24px">
+[ポイント]マイクロサービス間の連携テストはCDの中で自動化する
+</span>
+
+<img src="images/pipeline-3.png" width="70%"/>
+<ul>
+  <li style="font-size:24px">マルチOS・ブラウザでパラレル自動化テスト</li>
+</ul>
+
+---
+
+<span style="font-size:24px">
+[ポイント]ステージング環境とプロダクション環境のコンテナイメージは同一。AWS SysmtemsManagerで環境変数を切り替えるよう設定する。
+</span>
+
+<img src="images/pipeline-8.png" width="70%"/>
+
+***
+***
+
+#### 今後の記事公開の予定
+
+![image](images/cloud-native.jpg)
+<ul>
+  <span style="font-size:24px">
+  <li style="margin: 10px 0px 10px">SQSでいったん基本編は終了。発展編を執筆予定
+    <ul>
+      <li style="margin: 10px 0px 10px">S3ダイレクトアップロード・ダウンロード</li>
+      <li style="margin: 10px 0px 10px">EKS</li>
+      <li style="margin: 10px 0px 10px">Cassandraの利用</li>
+      <li style="margin: 10px 0px 10px">Cognito</li>
+      <li style="margin: 10px 0px 10px">AWS IoT</li>
+    </ul>
+  </li>
+  </span>
+</ul>
+
+---
+
+#### 今後の記事公開の予定
+
+![image](images/devops.jpg)
+
+<ul>
+  <span style="font-size:24px">
+  <li style="margin: 10px 0px 10px">発展編を執筆予定
+    <ul>
+      <li style="margin: 10px 0px 10px">AWS CodeStarの利用</li>
+      <li style="margin: 10px 0px 10px">AWS CloudFormationを利用した基盤自動化</li>
+    </ul>
+  </li>
+  </span>
+</ul>
+
+***

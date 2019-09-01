@@ -46,7 +46,9 @@
   <div class="slides">
     <section>
 
-<h3>JSUG 勉強会</h3>
+<h3>
+<img class="emoji" alt=":seedling:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png"> JSUG 勉強会 <img class="emoji" alt=":seedling:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png">
+</h3>
 
 <p><span style="font-size:28px">AWSで作るクラウドネイティブアプリケーションの基本とDevOps</span></p>
 
@@ -54,22 +56,45 @@
 
 </section>
 <section>
+<section>
 
 <h3>自己紹介</h3>
 
 <p><img src="images/profile.jpg" style="float:left" width="40%"></p>
-<div style="margin: 100px 0px auto">
+<div style="margin: 50px 0px auto">
 <ul>
   <div style="font-size:20px; margin:auto">
   <li style="margin: 10px 0px 10px">名前：川畑 光平(KAWABATA Kohei)</li>
   <li style="margin: 10px 0px 10px">会社：(株)NTTデータ</li>
   <li style="margin: 10px 0px 10px">今の仕事：プロジェクト支援(主にクラウド系)とR&amp;D</li>
+  <li style="margin: 10px 0px 10px">長崎県出身</li>
+  <li style="margin: 10px 0px 10px">趣味：AP実装、料理、水泳、スノボ</li>
+  <li style="margin: 10px 0px 10px">学生の頃Appleでバイトしてました(iPodが流行った頃)</li>
+  <li style="margin: 10px 0px 10px">2019.2月に長男が誕生</li>
   <li style="margin: 10px 0px 10px"><a href="https://aws.amazon.com/jp/blogs/psa/japan-apn-ambassador-2019/" target="_blank">2019 APN AWS Top Engineers &amp; Ambassadors</a></li>
   <li style="margin: 10px 0px 10px">マイナビ「ITSearch+」で記事連載中</li>
   </div>
 </ul>
 </div>
 
+</section>
+<section>
+
+<p><img src="images/father-child.jpg" style="float:left" width="50%"></p>
+
+<div style="margin: 100px 0px auto">
+<br>
+<br>
+←私
+<br>
+<br>
+<br>
+<br>
+<br>
+←長男
+</div>
+
+</section>
 </section>
 <section>
 
@@ -86,7 +111,8 @@
 </section>
 <section>
 
-<h3>How to use this slide</h3>
+<h3>
+<img class="emoji" alt=":wrench:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png"> How to use this slide</h3>
 
 <p><br></p>
 
@@ -96,6 +122,7 @@
   <li>Altキー + マウスクリックで拡大ズーム</li>
   <li>J,K,M,Lキーでも遷移</li>
   <li><strong><em>幾つかのスライドは下に遷移</em></strong></li>
+  <li>“shift + ?”でショートカットキー一覧</li>
 </ul>
 
 <p><span style="font-size:20px">
@@ -111,8 +138,10 @@
   <li>Backgroundと対象読者</li>
   <li>記事オーバービュー
     <ul>
-      <li>クラウドネイティブアプリケーション</li>
-      <li>DevOps</li>
+      <li>
+<img class="emoji" alt=":cloud:" src="https://github.githubassets.com/images/icons/emoji/unicode/2601.png">クラウドネイティブアプリケーション</li>
+      <li>
+<img class="emoji" alt=":octocat:" src="https://github.githubassets.com/images/icons/emoji/octocat.png">DevOps</li>
     </ul>
   </li>
   <li>各テーマのポイント・補足</li>
@@ -136,7 +165,7 @@
     幾つかのテーマに関して、AWSパートナーソリューションアーキテクトとも議論、内容を全社向けにフィードバック
     </li>
     <li style="margin: 10px 0px 10px">
-    どうせなら社外に公開(マイナビへWeb記事として寄稿)※記事としてはまとめることができたが、色々数えきれないトラブルシューティングがあって苦労したので、そういった情報は共有して、できる限り、同業エンジニアの労力を軽減したい想い。
+    どうせなら社外に公開(マイナビへWeb記事として寄稿)※ドキュメントとしてはまとめることができたが、色々数えきれないトラブルシューティングがあって苦労したので、そういった情報は共有して、できる限り、同業エンジニアの労力を軽減したい想い。
     </li>
   </span>
 </ul>
@@ -144,12 +173,13 @@
 </section>
 <section>
 
-<h4>記事の対象読者</h4>
+<h4>
+<img class="emoji" alt=":raising_hand:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f64b.png"> 記事の対象読者</h4>
 
 <ul>
   <span style="font-size:20px">
     <li style="margin: 15px 0px 15px">
-    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを知りたい。とはいえ、最低以下のような経験は必要。
+    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを知りたい方。とはいえ、最低以下のような経験は必要。
       <ul>
         <li>Java・SpringFrameworkを使ったことがある経験者</li>
         <li>Unix・LinuxなどのPOSIX系OS、Dockerコンテナを使ったことがある経験者</li>
@@ -157,13 +187,13 @@
       </ul>
     </li>
     <li style="margin: 15px 0px 15px">
-    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい。
+    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい方。
     </li>
     <li style="margin: 15px 0px 15px">
-    クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい。
+    クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい方。
     </li>
     <li style="margin: 15px 0px 15px">
-    各テーマを一部切り取って、構築・実装の参考にしたい。
+    各テーマを一部切り取って、構築・実装の参考にしたい方。
     </li>
   </span>
 </ul>
@@ -172,11 +202,12 @@
 <section>
 <section>
 
-<h3>Article Overview</h3>
+<h3>
+<img class="emoji" alt=":cloud:" src="https://github.githubassets.com/images/icons/emoji/unicode/2601.png"> Article Overview</h3>
 
 <p><img src="images/cloud-native.jpg" alt="image"></p>
 
-<p><span style="font-size:32px">AWSクラウドでよく利用される基本的なサービスの構築方法や、SpringBootをベースとしたアプリケーションを実装する際の基本事項をまとめた連載記事</span></p>
+<p><span style="font-size:32px">AWSクラウドでよく利用される基本的なサービスの構築方法や、SpringBootをベースとしてクラウド特有の特徴を生かしたアプリケーションを実装する際の基本事項をまとめた連載記事</span></p>
 
 </section>
 <section>
@@ -246,7 +277,8 @@
 
 <h4>NoSQL編</h4>
 
-<p><img src="images/architecture-dynamodb.png" width="60%"></p>
+<p><img src="images/architecture-dynamodb.png" style="float:left" width="45%"><br>
+<img src="images/ap-database.png" style="margin: 0 0 5px" width="45%"></p>
 
 <ul>
   <div style="font-size:24px">
@@ -309,7 +341,8 @@
 <section>
 <section>
 
-<h3>Article Overview</h3>
+<h3>
+<img class="emoji" alt=":octocat:" src="https://github.githubassets.com/images/icons/emoji/octocat.png"> Article Overview</h3>
 
 <p><img src="images/devops.jpg" alt="image"></p>
 
@@ -495,20 +528,11 @@
 <p><img src="images/pipeline-8.png" width="70%"></p>
 
 </section>
-<section>
-
-<h4>今後の記事公開の予定</h4>
-
-<ul>
-  <li>AWS CodeStarの利用</li>
-  <li>AWS CloudFormationを使用した基盤自動化</li>
-</ul>
-
-</section>
 </section>
 <section>
 
-<h3>各テーマのポイント・補足</h3>
+<h3>
+<img class="emoji" alt=":memo:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png">各テーマのポイント・補足</h3>
 
 <p><img src="images/cloud-native.jpg" alt="image"></p>
 
@@ -658,8 +682,8 @@ Q.　従来通りDB接続設定すればいいのでは？
 
 <br>
 
-<span style="font-size:24px">
-A.　設定が簡潔にかけるのがメリットかと思います。
+<span style="font-size:20px">
+A.　設定が簡潔なのがメリット。環境変数はSystemsManagerから取得し、セキュリティも向上。
 </span>
 
 <br>
@@ -1105,7 +1129,8 @@ public class MessageListener {
 </section>
 <section>
 
-<h3>各テーマのポイント・補足</h3>
+<h3>
+<img class="emoji" alt=":memo:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png">各テーマのポイント・補足</h3>
 
 <p><img src="images/devops.jpg" alt="image"></p>
 
@@ -1124,7 +1149,7 @@ public class MessageListener {
 
 <div style="text-align:left">
 <span style="font-size:24px">
-[補足]マイクロサービスとは言っているが、記事中では、どのようにサービスを分割するか、プロジェクトやアプリケーションコンポーネントの構成など事例は出したが、ベストプラクティスまで踏み込んだ議論はしていない
+[補足]マイクロサービスとは言っているが、記事中では、プロジェクトやアプリケーションコンポーネントの構成など事例は出したが、どのようにサービスを分割するかベストプラクティスまで踏み込んだ議論はしていない
 </span>
 
 <br>
@@ -1158,38 +1183,146 @@ public class MessageListener {
 
 <h4>CI - 静的チェックツール環境導入編 -</h4>
 
-<p><img src="images/continuous-integration.jpg" width="90%"></p>
-
-</section>
-<section>
+<p><img src="images/continuous-integration.jpg" width="60%"></p>
 
 <p><span style="font-size:24px">
 [ポイント]SonarQubeServerをALB+ECS+RDSで構成のメリット
 </span></p>
 
 <ul>
-  <li style="font-size:24px">ALB+ECSコンテナの運用で可用性を向上</li>
+  <li style="font-size:24px">SonarQubeServerをALB+ECSコンテナの運用で可用性を向上</li>
   <li style="font-size:24px">データベースをRDSにすることにより、バックアップ等保全性が向上　</li>
 </ul>
 
 </section>
 <section>
 
-<p><span style="font-size:24px"><a href="https://sonar.spring.io/projects?sort=-size" target="_blank">Spring.ioプロジェクトのSonarqubeプロジェクト</a>はどうなっているか？</span></p>
+<p><span style="font-size:24px"><a href="https://sonar.spring.io/projects?sort=-size" target="_blank">[補足]Spring.ioプロジェクトのSonarqubeプロジェクト</a>はどうなっているか？</span></p>
 
 <p><img src="images/sonarqube-spring-project.png" width="80%"></p>
 
 </section>
 </section>
+
+<section>
 <section>
 
-<pre><code class="language-java">public class HelloWorld {
-  public static void main(String[] args) {
-      System.out.println("Hello World!");
-  }
-}
-</code></pre>
+<h4>CI - SpringBootテストコード実装編 -</h4>
 
+<p><img src="images/microservice-test-scope.png" width="60%"></p>
+
+</section>
+<section>
+
+<p><img class="emoji" alt=":memo:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png">「テスト自動化の８原則」</p>
+
+<div style="font-size:30px; text-align:left; margin:10px 0 10px">
+
+1. 手動テストはなくならない <br>
+2. 手動でおこなって効果のないテストを自動化しても無駄である <br>
+3. 自動テストは書いたことしかテストしない <br>
+4. テスト自動化の効用はコスト削減だけではない <br>
+5. 自動テストシステムの開発は継続的におこなうものである <br>
+6. 自動化検討はプロジェクト初期から <br>
+7. 自動テストで新種のバグが見つかることは稀である <br>
+8. テスト結果分析という新たなタスクが生まれる <br>
+
+</div>
+
+<p><span style="font-size:18px">出典：<a href="https://sites.google.com/site/testautomationresearch/test_automation_principle" target="_blank">テスト自動化研究会 「テスト自動化の８原則」</a>より</span></p>
+
+</section>
+</section>
+
+<section>
+<section>
+
+<h4>CI - AWS CodeBuildによるCI実践編 -</h4>
+
+<p><img src="images/continuous-integration.jpg" width="60%"></p>
+
+<p><span style="font-size:24px">
+[ポイント]クラウド型CIツールのメリット
+</span></p>
+
+<ul>
+  <li style="font-size:24px">複数並走開発していても、マシンリソースを気にせずテスト</li>
+  <li style="font-size:24px">マスター・スレーブなど構成を気にせずシンプルにできる</li>
+</ul>
+
+</section>
+</section>
+
+<section>
+<section>
+
+<h4>AWS CodePipelineによるCD実践編</h4>
+
+<p><img src="images/pipeline.png" width="45%"></p>
+
+</section>
+<section>
+
+<p><span style="font-size:24px">
+[ポイント]マイクロサービス間の連携テストはCDの中で自動化する
+</span></p>
+
+<p><img src="images/pipeline-3.png" width="70%"></p>
+<ul>
+  <li style="font-size:24px">マルチOS・ブラウザでパラレル自動化テスト</li>
+</ul>
+
+</section>
+<section>
+
+<p><span style="font-size:24px">
+[ポイント]ステージング環境とプロダクション環境のコンテナイメージは同一。AWS SysmtemsManagerで環境変数を切り替えるよう設定する。
+</span></p>
+
+<p><img src="images/pipeline-8.png" width="70%"></p>
+
+</section>
+</section>
+
+<section>
+<section>
+
+<h4>今後の記事公開の予定</h4>
+
+<p><img src="images/cloud-native.jpg" alt="image"></p>
+<ul>
+  <span style="font-size:24px">
+  <li style="margin: 10px 0px 10px">SQSでいったん基本編は終了。発展編を執筆予定
+    <ul>
+      <li style="margin: 10px 0px 10px">S3ダイレクトアップロード・ダウンロード</li>
+      <li style="margin: 10px 0px 10px">EKS</li>
+      <li style="margin: 10px 0px 10px">Cassandraの利用</li>
+      <li style="margin: 10px 0px 10px">Cognito</li>
+      <li style="margin: 10px 0px 10px">AWS IoT</li>
+    </ul>
+  </li>
+  </span>
+</ul>
+
+</section>
+<section>
+
+<h4>今後の記事公開の予定</h4>
+
+<p><img src="images/devops.jpg" alt="image"></p>
+
+<ul>
+  <span style="font-size:24px">
+  <li style="margin: 10px 0px 10px">発展編を執筆予定
+    <ul>
+      <li style="margin: 10px 0px 10px">AWS CodeStarの利用</li>
+      <li style="margin: 10px 0px 10px">AWS CloudFormationを利用した基盤自動化</li>
+    </ul>
+  </li>
+  </span>
+</ul>
+
+</section>
 </section>
 
   </div>

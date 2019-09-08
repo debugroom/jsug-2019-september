@@ -4,19 +4,20 @@
 <span style="font-size:28px">AWSで作るクラウドネイティブアプリケーションの基本とDevOps</span>
 
 
-2019.9 @KoheiKawabata
+2019.9.20
 
 ***
 
 ### 自己紹介
 
 <p><img src="images/profile.jpg" style="float:left" width="40%"></p>
-<div style="margin: 50px 0px auto">
+<div style="margin: 20px 0px auto">
 <ul>
-  <div style="font-size:20px; margin:auto">
-  <li style="margin: 10px 0px 10px">名前：川畑 光平(KAWABATA Kohei)</li>
+  <div style="font-size:18px; margin:auto">
+  <li style="margin: 10px 0px 10px">名前：川畑 光平</li>
   <li style="margin: 10px 0px 10px">会社：(株)NTTデータ</li>
   <li style="margin: 10px 0px 10px">今の仕事：プロジェクト支援(主にクラウド系)とR&amp;D</li>
+  <li style="margin: 10px 0px 10px">SNSはFacebookしかやってません、<br/>質問あればDMかメールで</li>
   <li style="margin: 10px 0px 10px">長崎県出身</li>
   <li style="margin: 10px 0px 10px">趣味：AP実装、料理、水泳、スノボ</li>
   <li style="margin: 10px 0px 10px">学生の頃Appleでバイトしてました(iPodが流行った頃)</li>
@@ -62,11 +63,11 @@
 
 <br />
 
-- ___黄色の文字はリンク___
-- ___ESCキーを押すとスライドのオーバービュー___
+- <u>黄色の文字はリンク</u>
+- <u>ESCキーを押すとスライドのオーバービュー</u>
 - Altキー + マウスクリックで拡大ズーム
 - J,K,M,Lキーでも遷移
-- ___幾つかのスライドは下に遷移___
+- <u>幾つかのスライドは下に遷移</u>
 - "shift + ?"でショートカットキー一覧
 
 <span style="font-size:20px">
@@ -112,7 +113,7 @@
 <ul>
   <span style="font-size:20px">
     <li style="margin: 15px 0px 15px">
-    できるだけ学習コスト低く、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを知りたい方。とはいえ、最低以下のような経験は必要。
+    <u>できるだけ学習コスト低く</u>、AWSをベースとしたクラウドネイティブなアプリケーション開発のポイントを知りたい方。とはいえ、最低以下のような経験は必要。<br/>
       <ul>
         <li>Java・SpringFrameworkを使ったことがある経験者</li>
         <li>Unix・LinuxなどのPOSIX系OS、Dockerコンテナを使ったことがある経験者</li>
@@ -120,7 +121,7 @@
       </ul>
     </li>
     <li style="margin: 15px 0px 15px">
-    AWSのマネージドサービスを可能な限り活用して、できるだけ少数のリソースで開発を行いたい方。
+    AWSのマネージドサービスを可能な限り活用して、できるだけ<u>少数のリソース(OSSを活用するのはよいですが、そのためにEC2立てたり、ライセンス以外のコストも大きいのでそれを避けたい)</u>で開発を行いたい方。
     </li>
     <li style="margin: 15px 0px 15px">
     クラウドネイティブな実装方法からマイクロサービス、CI/CD、基盤自動化まで一貫したストーリーでのベースの雛形が欲しい方。
@@ -138,7 +139,7 @@
 
 ![image](images/cloud-native.jpg)
 
-<span style="font-size:32px">AWSクラウドでよく利用される基本的なサービスの構築方法や、SpringBootをベースとしてクラウド特有の特徴を生かしたアプリケーションを実装する際の基本事項をまとめた連載記事</span>
+<span style="font-size:30px"><a href="https://news.mynavi.jp/itsearch/series/devsoft/AWS.html" target="_blank">AWSクラウドでよく利用される基本的なサービスの構築方法や、SpringBootをベースとしてクラウド特有の特徴を活用したアプリケーションを実装する際の基本事項をまとめた連載記事</a></span>
 
 ---
 
@@ -148,9 +149,9 @@
 
 <ul>
   <span style="font-size:24px">
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4316" target="_blank">(1)Spring Cloud Functionを使ったLambdaファンクション実装</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4318" target="_blank">(2)AWS Lambdaの設定</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4321" target="_blank">(3)Amazon API Gatewayの設定</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4316" target="_blank">(1) Spring Cloud Functionを使ったLambdaファンクション実装</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4318" target="_blank">(2) AWS Lambdaの設定</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4321" target="_blank">(3) Amazon API Gatewayの設定</a></li>
   </span>
 </ul>
 
@@ -159,16 +160,16 @@
 #### ECSコンテナ編
 
 <img src="images/ecs-architecture.png" style="float:left" width="50%"/>
-<div style="margin: 100px 0px auto">
+<div style="margin: 50px 0px auto">
 <ul>
   <div style="font-size:18px">
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4354" target="_blank">(4)VPC(Virtual Private Cloud)の構築</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4359" target="_blank">(5)ALB(Application Load Balancer)の構築</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4363" target="_blank">(6)SpringBootを使ったアプリケーション実装</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4390" target="_blank">(7)アプリケーションのDockerイメージの作成</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4405" target="_blank">(8)ECSクラスタの構築</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4408" target="_blank">(9)ECSタスクの定義</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4416" target="_blank">(10)ECSサービスの実行</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4354" target="_blank">(4) VPC(Virtual Private Cloud)の構築</a><br/>左図のネットワークをAWSで構成する方法</li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4359" target="_blank">(5) ALB(Application Load Balancer)の構築</a><br/>パスベースルーティング設定</li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4363" target="_blank">(6) SpringBootを使ったアプリケーション実装</a><br/>ALB経由でのサービス間呼び出し</li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4390" target="_blank">(7) アプリケーションのDockerイメージの作成</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4405" target="_blank">(8) ECSクラスタの構築</a>><br/>FagateではなくEC2起動型</li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4408" target="_blank">(9) ECSタスクの定義</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4416" target="_blank">(10) ECSサービスの実行</a></li>
   </div>
 </ul>
 </div>
@@ -180,8 +181,9 @@
 
 <ul>
   <div style="font-size:24px">
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4422" target="_blank">(11)RDS(RelationalDatabaseService)の構築</a></li>
-  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4426" target="_blank">(12〜13)Spring Cloud AWSとSpring Data JPAを使った実装</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4422" target="_blank">(11) RDS(RelationalDatabaseService)の構築</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4426" target="_blank">(12) Spring Cloud AWSとSpring Data JPAを使った実装(設定)</a></li>
+  <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4449" target="_blank">(13) Spring Cloud AWSとSpring Data JPAを使った実装(処理実装)</a></li>
   </div>
 </ul>
 ---
@@ -192,8 +194,8 @@
 
 <ul>
   <div style="font-size:24px">
-  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4473" target="_blank">(14)NoSQL基礎解説(CAP定理による分類)</a></li>
-  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4479" target="_blank">(15)NoSQL基礎解説(AP型データベースの特徴)</a></li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4473" target="_blank">(14) NoSQL基礎解説(CAP定理による分類)</a></li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4479" target="_blank">(15) NoSQL基礎解説(AP型データベースの特徴)</a></li>
   </div>
 </ul>
 
@@ -206,8 +208,9 @@
 
 <ul>
   <div style="font-size:24px">
-  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4498" target="_blank">(16)AmazonDynamoDBの構築</a></li>
-  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4506" target="_blank">(17〜18)Spring Data DynamoDBを使った実装</a></li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4498" target="_blank">(16) AmazonDynamoDBの構築</a></li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4506" target="_blank">(17) Spring Data DynamoDBを使った実装(設定)</a></li>
+  <li style="margin: 10px 0px 10px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4512" target="_blank">(18) Spring Data DynamoDBを使った実装(処理実装)</a></li>
   </div>
 </ul>
 
@@ -219,11 +222,13 @@
 
 <div style="margin: 100px 0px auto">
 <ul >
-  <div style="font-size:18px">
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4523" target="_blank">(19)ローカルRedisServerの構築</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4525" target="_blank">(20〜21)Spring SessionとSpring Data Redisを使った実装</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4543" target="_blank">(22)AmazonElastiCacheの構築</a></li>
-  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4566" target="_blank">(23〜24)セッション共有するECSアプリケーション実装</a></li>
+  <div style="font-size:16px">
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4523" target="_blank">(19) ローカルRedisServerの構築</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4525" target="_blank">(20) Spring SessionとSpring Data Redisを使った実装(設定)</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4537" target="_blank">(21) Spring SessionとSpring Data Redisを使った実装(処理実装)</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4543" target="_blank">(22) AmazonElastiCacheの構築</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4566" target="_blank">(23) セッション共有するECSアプリケーション構築(ALB)</a></li>
+  <li style="margin: 15px 0px 15px"><a href="https://news.mynavi.jp/itsearch/article/devsoft/4592" target="_blank">(24) セッション共有するECSアプリケーション実装(ECS)</a></li>
   </div>
 </ul>
 </div>
@@ -231,20 +236,21 @@
 
 ---
 
-#### S3編
+#### S3編(今月から公開)
 
 <img src="images/S3Access.png" width="70%"/>
 
 <ul>
-  <div style="font-size:24px">
-    <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4447" target="_blank">(25)AmazonS3バケットの構築とアップロード</a></li>
-    <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4566" target="_blank">(26〜27)SpringCloudAWSを使ったファイルダウンロード・アップロード実装</a></li>
+  <div style="font-size:22px">
+    <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4447" target="_blank">(25) AmazonS3バケットの構築とアップロード</a></li>
+    <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4566" target="_blank">(26) SpringCloudAWSを使ったファイルダウンロード・アップロード実装(設定)</a></li>
+    <li><a href="https://news.mynavi.jp/itsearch/article/devsoft/4566" target="_blank">(27) SpringCloudAWSを使ったファイルダウンロード・アップロード実装(処理実装)</a></li>
   </div>
 </ul>
 
 ---
 
-#### SQS編(今月から)
+#### SQS編(来月から公開)
 
 <img src="images/sqs-pattern.png" width="60%"/>
 
@@ -264,7 +270,7 @@
 
 ![image](images/devops.jpg)
 
-<span style="font-size:32px">マイクロサービスアーキテクチャ(MSA)アプリケーションでDevOpsや基盤自動化する際の基本事項をまとめた連載記事</span>
+<span style="font-size:32px"><a href="https://news.mynavi.jp/itsearch/series/devsoft/AWSAuto.html" target="_blank">マイクロサービスアーキテクチャ(MSA)アプリケーションでDevOpsや基盤自動化する際の基本事項をまとめた連載記事</a></span>
 
 
 ---
@@ -452,7 +458,7 @@
     画像加工やエンコードなどとにかくマシンリソースを使う処理の場合、パフォーマンス影響を気にしなくて良い。
     </li>
     <li style="margin: 10px 0px 10px">
-    S3ファイルアップロードなどのイベント後続処理といった形で、AWSクラウドサービスの連携が楽。
+    S3ファイルアップロードなどのイベント後続処理といった形で、ECSアプリケーションに組みこむ形にすると、AWSクラウドサービスの連携が楽に実装できる。
     </li>
   </span>
 </ul>
@@ -464,7 +470,7 @@
     SQSキュー、SNSへの連携、DynamoDBやRDSへのアクセスなどのLambda実装はボイラープレートコードが乱立しがち。Spring Cloud Function + Spring Cloud AWS + Spring Data XXXと組み合わせればかなりスッキリかける。
     </li>
     <li style="margin: 10px 0px 10px">
-    エラー発生時の例外ハンドリング(ユーザへの通知やシステムメッセージどうするか)がいつも課題。同期的なハンドリングは難しく、デッドレターキューに投げつけるなど雑な対応しかできないのでは。
+    エラー発生時の例外ハンドリング(ユーザへの通知やシステムメッセージどうするか)がいつも課題。同期的なハンドリングは複雑になりがちで難しく、デッドレターキューに投げつけるなど雑な対応しかできないのでは。
     </li>
     <li style="margin: 10px 0px 10px">
     デバッグやテストが大変。ServerlessFramework導入するしか手はないのか。
@@ -473,6 +479,13 @@
 </ul>
 
 </div>
+
+---
+
+<span style="font-size:24px">例外ハンドリングが大変な例(動画をアップしてサムネイルを作る処理)</span>
+
+<img src="images/serverless-error-handling.png" width="65%"/>
+
 
 ***
 
@@ -541,7 +554,7 @@ Q.　EKS(Elastic Kubernetes Service)は使わないの？
 <br />
 
 <span style="font-size:24px">
-A.　EKSが東京リージョンにリリースする前に検討していたので、いったん見送りました。それにECSが想定していた以上にオーケストレーションとして優秀だったこと(ALBとECSコンテナ間のポートマッピングやセキュリティ制御、Dockerコンテナの再利用性など不足が感じられなかったこと)や、また、後述するCodeBuild、CodePipelineとのCI、CD連携は現在もEKSよりECSの方が一日の長があります。ただし、Kubernetesの使用はベンダロックインの観点から採用頻度が高いので今後検証する予定です。
+A.　EKSが東京リージョンにリリースする前に検討していたので、いったん見送りました。それにECSが想定していた以上にオーケストレーションとして優秀だったこと(ALBとECSコンテナ間のポートマッピングやセキュリティ制御、Dockerコンテナの再利用性など不足が感じられなかったこと)や、また、後述するCodeBuild、CodePipelineとのCI、CD、他のAWSサービス連携は現在もEKSよりECSの方が一日の長があります。ただし、Kubernetesの使用はベンダロックインの観点から採用頻度が高いので今後検証する予定です。場合によっては、フロントやバックエンドをEKS構成に置き換えてもよい(というか置き換えが可能であるべき)と思います。
 </span>
 
 </div>
@@ -604,7 +617,10 @@ rds:
 
 <span style="font-size:32px">[ポイント]各データベースに適したユースケースやデータ特性</span>
 
-<br/>
+<span style="font-size:20px">
+NoSQLは色々種類や特徴があるが、ユースケースやデータ特性に適したものを選択すべき。
+</span>
+
 
 <div style="font-size:18px">
 <table style="padding:10px 0 10px">
@@ -668,20 +684,17 @@ rds:
 [補足]<a href="https://github.com/debugroom/mynavi-sample-spring-data-dynamodb" target="_blank">Spring Data DynamoDBのサンプル</a>や
 <a href="https://github.com/debugroom/mynavi-sample-spring-data-cassandra" target="_blank">Spring Data Cassadraを使ったサンプル</a>実装は紹介しているが、AP型データモデルはどう設計すればよいか？
 </span>
-
-<br />
-<br />
-
+<br/><br/>
 <ul>
-  <span style="font-size:18px">
+  <span style="font-size:16px">
   <li>AWSで作るクラウドネイティブアプリケーション(発展編)で解説予定</li>
   <li style="margin: 10px 0px 10px">ただ、当面先になるのでポイントだけ列挙
     <ul>
       <li style="margin: 10px 0px 10px">1:1や1:Nのような関係のデータモデルだとRDBと同じような形でもそんなに問題はない</li>
       <li style="margin: 10px 0px 10px">ただし、キー以外の検索ができないので、それ以外の項目で検索をかける場合はインデックスを作っておく</li>
       <li style="margin: 10px 0px 10px">N:Nの関連になるようなデータモデルはRDBと同じように関連実体(学生エンティティと講義エンティティの間にある受講のような実体でキーだけのインデックステーブル)を作っておくとうまくいくケースも多い</li>
-      <li style="margin: 10px 0px 10px">テーブルのJOINは当然できないので、アプリ側でデータを取ってきてから加工する手法を使う</li>
-      <li style="margin: 10px 0px 10px">設計の最初はまずデータアクセスのユースケースを洗い出すこと。</li>
+      <li style="margin: 10px 0px 10px">テーブルのJOINは当然できないので、アプリ側でデータを取ってきてから加工する手法を使う<br/>Springだと<a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/jdbc/core/ResultSetExtractor.html" target="_blank">ResultSetExtractor</a>を拡張してMap形式で結合したいキーとデータをマッピングするのがポイント</li>
+      <li style="margin: 10px 0px 10px">設計はまずデータアクセスのユースケースを洗い出すこと(それから適したデータモデルを考える)。</li>
       <li style="margin: 10px 0px 10px">参照は検索キーを注意していれば良いが、非正規化されたデータだと更新処理がしんどい(現実的でない)場合があるので、従来通りRDBを使う(あるいは併用する)ことも検討する</li>
       <li style="margin: 10px 0px 10px">大量書き込み時はプライマリキーにUUIDや乱数などで書き込むノードを分散させる。</li>
       <li style="margin: 10px 0px 10px">ホットデータとコールドデータでテーブルを分けること</li>
@@ -795,6 +808,44 @@ cloud.aws.region.auto=false
 </code></pre>
 
 ---
+
+<span style="font-size:24px">[ポイント]認証キーの取り扱い方 - ダメじゃないけどイマイチな例 - </span> :expressionless:
+
+<pre style="font-size:14px"><code class="java" data-noescape>
+@Configuration
+public class S3Config {
+
+    @Value("${cloud.aws.credentials.accessKey}")
+    private String accessKey;
+
+    @Value("${cloud.aws.credentials.secretKey}")
+    private String secretKey;
+
+    @Value("${cloud.aws.region.static}")
+    private String region;
+
+    @Bean
+    public BasicAWSCredentials basicAWSCredentials() {
+        return new BasicAWSCredentials(accessKey, secretKey);
+    }
+
+    @Bean
+    public AmazonS3 amazonS3Client(AWSCredentials awsCredentials) {
+        return AmazonS3ClientBuilder.standard().withRegion(Regions.fromName(region)).build();
+    }
+}
+</code></pre>
+
+<pre style="font-size:14px"><code class="java" data-noescape>
+cloud:
+  aws:
+    credentials:
+      accessKey: ${AWS_ACCESS_KEY_ID}
+      secretKey: ${AWS_SECRET_ACCESS_KEY}
+</code></pre>
+
+---
+
 <span style="font-size:24px">[ポイント]認証キーの取り扱い方 - よい例 - </span> :thumbsup:
 
 <pre style="font-size:18px"><code class="java" data-noescape>
@@ -828,7 +879,7 @@ public class S3Config {
 <br/>
 <ul>
   <span style="font-size:18px">
-  <li>コードをGitHubのパブリックレポジトリにプッシュしたら、キーを探索しているボットに直ちに奪取される</li>
+  <li>GitHubのパブリックレポジトリにプッシュしたら、キーを探索しているボットに直ちに奪取される</li>
   <li style="margin: 10px 0px 10px">キーの部分を環境変数に変えてやっている例も割と見かけるが、オススメのやり方ではない。
     <ul>
       <li style="margin: 10px 0px 10px">環境変数で開発環境や本番環境ごとにキーを替える想定だと思われるが、上記の設定クラスのコード中で、AmazonS3ClientBuilder.standard().build()で内部的に呼ばれる<a href="https://github.com/aws/aws-sdk-java/blob/master/aws-java-sdk-core/src/main/java/com/amazonaws/auth/DefaultAWSCredentialsProviderChain.java" target="_blank">DefaultAWSCredentialsProviderChain</a>では、以下の順で認証情報を取得する</li>
@@ -875,7 +926,7 @@ public class S3Config {
 
 ---
 
-<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS Producer-Consumerアプリケーション</span>
+<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS <a href="https://github.com/debugroom/mynavi-sample-aws-sqs/tree/master/sqs-producer" target="_blank">Producer</a>-Consumerアプリケーション</span>
 <span style="font-size:24px">Producer設定クラス</span>
 <pre style="font-size:16px"><code class="java" data-noescape>
 @Configuration
@@ -903,7 +954,7 @@ public class SqsConfig {
 </code></pre>
 ---
 
-<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS Producer-Consumerアプリケーション</span>
+<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS <a href="https://github.com/debugroom/mynavi-sample-aws-sqs/tree/master/sqs-producer" target="_blank">Producer</a>-Consumerアプリケーション</span>
 <span style="font-size:24px">ProducerRepository</span>
 
 <pre style="font-size:18px"><code class="java" data-noescape>
@@ -928,7 +979,7 @@ public class SampleRepositoryImpl implements SampleRepository{
 ---
 
 
-<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS Producer-Consumerアプリケーション</span>
+<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS Producer-<a href="https://github.com/debugroom/mynavi-sample-aws-sqs/tree/master/sqs-consumer" target="_blank">Consumer</a>アプリケーション</span>
 <span style="font-size:24px">Consumer設定クラス</span>
 <pre style="font-size:16px"><code class="java" data-noescape>
 @Configuration
@@ -951,8 +1002,8 @@ public class SqsConfig {
 </code></pre>
 
 ---
-<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS Producer-Consumerアプリケーション</span>
-<span style="font-size:24px">Consumer</span>
+<span style="font-size:24px">[ポイント]SpringCloudAWSを使ったSQS Producer-<a href="https://github.com/debugroom/mynavi-sample-aws-sqs/tree/master/sqs-consumer" target="_blank">Consumer</a>アプリケーション</span>
+<span style="font-size:24px">Consumer※このバッチ実行だとスレッドセーフでない&多重起動はできないので注意</span>
 <pre style="font-size:16px"><code class="java" data-noescape>
 @EnableSqs
 public class MessageListener {
@@ -981,7 +1032,7 @@ public class MessageListener {
 
 ---
 
-<span style="font-size:24px">[補足]SQS Queueを刈り取って実行するSpring Batchのサンプル</span>
+<span style="font-size:24px">[補足]SQS Queueを刈り取って実行する<a href="https://github.com/debugroom/mynavi-sample-aws-sqs/tree/master/spring-batch" target="_blank">Spring Batchのサンプル</a>の処理イメージ</span>
 
 <img src="images/spring-batch-sample.png" width="100%"/>
 
@@ -1132,10 +1183,12 @@ public class MessageListener {
   <li style="margin: 10px 0px 10px">SQSでいったん基本編は終了。発展編を執筆予定
     <ul>
       <li style="margin: 10px 0px 10px">S3ダイレクトアップロード・ダウンロード</li>
-      <li style="margin: 10px 0px 10px">EKS</li>
-      <li style="margin: 10px 0px 10px">Cassandraの利用</li>
-      <li style="margin: 10px 0px 10px">Cognito</li>
+      <li style="margin: 10px 0px 10px">Cognito+SpringSecurity認証認可</li>
+      <li style="margin: 10px 0px 10px">EKS・AppMesh</li>
+      <li style="margin: 10px 0px 10px">Cassandraの利用・AP型データベースデータモデル</li>
+      <li style="margin: 10px 0px 10px">KinesisStream</li>
       <li style="margin: 10px 0px 10px">AWS IoT</li>
+      <li style="margin: 10px 0px 10px">ElasticMapReduce</li>
     </ul>
   </li>
   </span>
@@ -1149,10 +1202,11 @@ public class MessageListener {
 
 <ul>
   <span style="font-size:24px">
-  <li style="margin: 10px 0px 10px">発展編を執筆予定
+  <li style="margin: 10px 0px 10px">執筆予定
     <ul>
       <li style="margin: 10px 0px 10px">AWS CodeStarの利用</li>
       <li style="margin: 10px 0px 10px">AWS CloudFormationを利用した基盤自動化</li>
+      <li style="margin: 10px 0px 10px">AWS SystemsManager+CloudWatch</li>
     </ul>
   </li>
   </span>

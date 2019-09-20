@@ -439,6 +439,20 @@
 
 ![image](images/cloud-native.jpg)
 
+---
+
+:memo: <span style="font-size:28px">クラウドネイティブアプリケーションのポイント</span>
+
+<ul>
+  <span style="font-size:24px">
+  <li style="margin: 10px 0px 10px">サーバレス&コンテナアプリケーションの基本の使い方を押さえる</li>
+  <li style="margin: 10px 0px 10px">サーバレス&コンテナアプリケーションを上手く組み合わせる</li>
+  <li style="margin: 10px 0px 10px">RDB&NoSQLをユースケースに合わせて上手に使いこなす</li>
+  <li style="margin: 10px 0px 10px">共有ストレージをユースケースに合わせて上手に使いこなす</li>
+  <li style="margin: 10px 0px 10px">キューをユースケースに合わせて上手に使いこなす</li>
+  </span>
+</ul>
+
 ***
 
 #### サーバレス編
